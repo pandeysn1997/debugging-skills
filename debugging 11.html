@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p>
+   <script>
+       function bar() {
+    var foo = 0;
+    function foo() {}
+    console.log(typeof foo);
+}
+
+bar(); // What does this return? Why?
+
+function baz() {
+    var foo;
+    function foo() {}
+    console.log(typeof foo);
+}
+
+baz(); // How about now?
+
+function quux() {
+    var foo = 0;
+    var foo = function () {}
+    console.log(typeof foo);
+}
+
+quux(); // How about now?
+   </script> 
+</body>
+</html>
